@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// @use '~@angular/material' as mat;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@400;700');
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+:root {
+  --header-font: 'Bebas Neue', cursive;
+  --sub-font: 'Quicksand', sans-serif;
+}
+
+body {
+  // background-color: #DEDBD5;
+}
+
+// border on tab header has to removed on class
+.mat-tab-header {
+  border: none;
+
+}
+
+mat-tab-header {
+  background-color: grey;
+  // border: none;
+
+  .mat-tab-label {
+
+    font-family: var(--header-font);
+    font-size: 1.4em;
+
+  }
+
+  .mat-tab-labels {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .mat-tab-label {
+    width: 50%;
+  }
+
+  .mat-ink-bar {
+    background-color: #ffffff !important;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.mat-tab-body-content {
+  font-family: var(--sub-font) !important;
+}

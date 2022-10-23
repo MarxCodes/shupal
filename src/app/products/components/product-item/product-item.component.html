@@ -1,0 +1,38 @@
+<!-- <h1>{{ product | json }} | {{ index }}</h1> -->
+<!-- "id": 1, "title":  "price":, "description":, "category":, "image":, "rating": { "rate": 3.9, "count": 120 } } | 0; -->
+<div class="my-item h-72 flex-grow relative max-w-full w-[400px]">
+  <span
+    class="border-left border-slate-900 border-l-2 box-border h-full absolute"
+  ></span>
+  <div
+    routerLink="/products/{{ product.id }}"
+    class="animation-container max-w-full p-4"
+  >
+    <!-- style="width: 400px" -->
+    <!-- <div
+    class="bg-img w-64 h-64"
+    [ngStyle]="{ 'background-image': 'url(' + product.image + ')' }"
+    ></div> -->
+    <button class="float-right clear-both bg-yellow-300 p-2">
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >add</mat-icon
+      >
+    </button>
+    <h1 class="font-header text-2xl text-slate-900">
+      {{ product.title | slice: 0:25 }}
+    </h1>
+    <h1 class="font-header text-1xl text-slate-700">{{ product.category }}</h1>
+    <h2 class="w-fit font-header bg-yellow-400 p-1">${{ product.price }}</h2>
+    <img
+      class="m-auto w-40 h-40 object-scale-down"
+      src="{{ product.image }}"
+      alt=""
+    />
+    <!-- <div class="card-detail"></div>
+      <ng-content></ng-content> -->
+  </div>
+  <span class="border-bottom border-slate-900 border-b-2 box-border block">
+  </span>
+</div>
+<!-- <span class="border-slate-900 box-border block"> </span> -->
+<!-- width: 10rem; object-fit: scale-down; /* height: 82%; */ aspect-ratio: 2/3; -->

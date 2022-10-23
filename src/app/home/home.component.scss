@@ -1,0 +1,55 @@
+:root {}
+
+.Stars {
+  --star-size: 60px;
+  --star-color: #ffffff;
+  --star-background: #fc0000;
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; // make sure ★ appears correctly
+  line-height: 1;
+
+  &::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid green;
+  }
+}
+
+
+.bg {
+  background: url('../../assets/1300h/home-bg@1300x.webp');
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-position: left;
+}
+
+.lad-banner {
+  // background: url('../../assets/36ppi/ol-shoe.png');
+  // height: 50vh;
+  // width: 100%;
+  // background-size: cover;
+  // display: block !important;
+  // background-position: left;
+
+  img::before {
+    content: '';
+    position: absolute;
+    background: url('../../assets/36ppi/bg-colour.png');
+  }
+}
+
+// .card-img::after {
+//   content: '';
+//   width: 100%;
+//   height: 75%;
+//   position: absolute;
+//   background-image: linear-gradient(to right, rgb(0, 50, 150) 0%, rgb(0, 25, 50) 100%);
+//   opacity: .2;
+// }

@@ -1,0 +1,140 @@
+<!-- <h1
+  routerLink="/products"
+  class="text-5xl font-bold underline dark:bg-slate-900"
+>
+  find me some prodz
+</h1> -->
+<ul class="flex justify-evenly font-header">
+  <li
+    class="text-2xl font-bold py-2"
+    *ngFor="let item of navList"
+    routerLink="{{ item.url }}"
+  >
+    {{ item.name }}
+  </li>
+</ul>
+<div class="bg"></div>
+<div class="card-container flex flex-col md:flex-row justify-evenly my-10">
+  <div class="card relative flex-grow max-w-full my-2 md:mx-3">
+    <div
+      class="card-img bg-cover"
+      style="
+        background-image: url('../../assets/36ppi/mens-small2.webp');
+        height: 600px;
+      "
+    ></div>
+    <div
+      class="btn-container absolute bottom-10 left-1/2 -translate-x-2/4 flex flex-col"
+    >
+      <button
+        class="block border-2 border-slate-900 font-header text-xl text-slate-900 px-4 py-2 mb-2"
+      >
+        Latest Clothes
+      </button>
+      <button
+        class="block border-2 border-slate-900 font-header text-xl text-slate-900 px-4 py-2"
+      >
+        Sale Clothes
+      </button>
+    </div>
+  </div>
+  <div class="card relative flex-grow max-w-full my-2 md:mx-3">
+    <div
+      class="card-img bg-cover"
+      style="
+        background-image: url('../../assets/1300h/womens-clothing@1300x.webp');
+        height: 600px;
+      "
+    ></div>
+    <div
+      class="btn-container absolute bottom-10 left-1/2 -translate-x-2/4 flex flex-col"
+    >
+      <button
+        class="block border-2 border-slate-900 font-header text-xl text-slate-900 px-4 py-2 mb-2"
+      >
+        Latest Clothes
+      </button>
+      <button
+        class="block border-2 border-slate-900 font-header text-xl text-slate-900 px-4 py-2"
+      >
+        Sale Clothes
+      </button>
+    </div>
+  </div>
+  <div class="card relative flex-grow max-w-full my-2 md:mx-3">
+    <div
+      class="card-img h-4/5 bg-cover"
+      style="
+        background-image: url('../../assets/1300h/jewellery@1300x.webp');
+        height: 600px;
+      "
+    ></div>
+    <div
+      class="btn-container absolute bottom-10 left-1/2 -translate-x-2/4 flex flex-col"
+    >
+      <button
+        class="block border-2 border-slate-900 font-header text-xl text-slate-900 px-4 py-2 mb-2"
+      >
+        Latest Clothes
+      </button>
+      <button
+        class="block border-2 border-slate-900 font-header text-xl text-slate-900 px-4 py-2"
+      >
+        Sale Clothes
+      </button>
+    </div>
+  </div>
+</div>
+<div class="lad-banner relative">
+  <!-- <div
+    class="bg-ad"
+    style="
+      background: url('../../assets/36ppi/bg-colour.png');
+      position: absolute;
+    "
+  ></div> -->
+  <img
+    src="../../assets/36ppi/ol-shoe.png"
+    class="absolute"
+    style="height: 350px; left: 10%"
+    alt=""
+  />
+  <div
+    class="banner-text absolute right-40 flex flex-col items-center space-y-4 top-1/2 translate-y-2/4"
+  >
+    <h3 class="font-header text-slate-900 text-2xl">Make Your</h3>
+    <h1 class="font-header text-slate-900 text-6xl">Style</h1>
+    <h3 class="font-header text-slate-900 text-2xl">
+      Use Code
+      <span class="bg-red-800 text-gray-50 p-2 px-4 rounded-full">Extra20</span>
+    </h3>
+    <button
+      class="font-header bg-gray-50 text-red-800 text-2xl py-2 px-4 rounded-full"
+    >
+      Shop Now
+    </button>
+  </div>
+</div>
+<div
+  class="new-bg"
+  style="
+    background: radial-gradient(
+      circle,
+      rgba(255, 220, 254, 1) 0%,
+      rgba(228, 110, 188, 1) 100%
+    );
+    height: 300px;
+    width: 100%;
+  "
+></div>
+<!-- class="bg h-full w-full"
+style="background-image: url('/shupal/src/assets/1300h/home-bg@1300x.png')" -->
+<!-- <img
+  src="shupal/src/assets/1300h/home-bg@1300x.png"
+  class="flex h-full w-full"
+/> -->
+<!-- <div
+  class="Stars"
+  style="--rating: 2.5"
+  aria-label="Rating of this product is 2.3 out of 5."
+></div> -->

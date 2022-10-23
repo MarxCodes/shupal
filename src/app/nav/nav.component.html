@@ -1,0 +1,19 @@
+<nav class="flex items-center border-b-slate-900 border-b-2 pt-4 px-12">
+  <span style="flex: 1 1 auto"></span>
+  <h1 class="font-header text-6xl flex-1 text-right" [routerLink]="['/home']">
+    Shopal
+  </h1>
+  <span style="flex: 1 1 auto"></span>
+
+  <!-- *ngIf="cartItems$ | async as cart" -->
+  <h2 [routerLink]="['/cart']" class="font-header text-2xl flex-1 text-right">
+    Cart
+    <!-- *ngFor="let item of card; let i = index" -->
+    <mat-icon
+      [matBadge]="card.length"
+      [matBadgeHidden]="card.length <= 0"
+      matBadgeColor="warn"
+      >shopping_cart</mat-icon
+    >
+  </h2>
+</nav>

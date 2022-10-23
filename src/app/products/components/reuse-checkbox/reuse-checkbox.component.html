@@ -1,0 +1,16 @@
+<div class="container">
+  <form [formGroup]="form">
+    <label *ngFor="let item of list" [for]="[item]">
+      <input
+        type="radio"
+        name="checks"
+        [id]="[item]"
+        formControlName="checks"
+        [value]="[item]"
+      />
+      <span>{{ item }}</span>
+      <div class="check"></div>
+    </label>
+    <button>Apply</button>
+  </form>
+</div>

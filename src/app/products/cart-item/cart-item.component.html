@@ -1,0 +1,30 @@
+<div
+  class="wrapper flex flex-row border-b-slate-900 border-b-2 justify-around items-center py-2"
+>
+  <img
+    class="w-40 h-40 object-scale-down rounded-full"
+    src="{{ cartItem.image }}"
+    alt=""
+  />
+  <div class="title">
+    <h1 class="text-3xl font-header">{{ cartItem.title }}</h1>
+    <h2 class="text-1xl text-slate-700 font-header">{{ cartItem.category }}</h2>
+  </div>
+
+  <div class="qty-control flex flex-row">
+    <button class="flex h-8 w-8 bg-slate-400 items-center justify-center mr-2">
+      <!-- (click)="minus()" -->
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >remove</mat-icon
+      >
+    </button>
+    <input class="border-slate-900 border-2 w-12 mr-2" type="text" value="1" />
+    <button class="flex h-8 w-8 bg-slate-400 items-center justify-center mr-2">
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >add</mat-icon
+      >
+    </button>
+  </div>
+  <!-- (click)="ad/d()" -->
+  <p class="text-2xl font-header">$ {{ cartItem.price }}</p>
+</div>

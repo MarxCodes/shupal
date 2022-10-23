@@ -1,0 +1,36 @@
+<!-- <p>cart-products works!</p> -->
+<div class="wrapper flex flex-col sm:flex-row justify-around p-4">
+  <div class="cart-container flex-1 pr-4">
+    <h1 class="font-header text-4xl pb-6">Shopping Cart</h1>
+    <h3 *ngIf="!cartItems$" class="font-header text-2xl">
+      Current No Items in Cart
+    </h3>
+    <div class="body" *ngIf="cartItems$ | async as cart">
+      <app-cart-item *ngFor="let item of cart" [cartItem]="item">
+      </app-cart-item>
+    </div>
+    <h2 class="font-header text-2xl border-slate-900 border-y-2">
+      Subtotal: $66.77
+    </h2>
+    <button class="font-header text-2xl p-2 bg-blue-600 text-zinc-50">
+      Checkout
+    </button>
+  </div>
+  <div class="order-summary bg-slate-300 p-3">
+    <h1
+      class="font-header text-2xl text-slate-900 border-b-2 border-b-slate-800"
+    >
+      Order Summary
+    </h1>
+    <h4 class="font-header text-slate-800">
+      Order Subtotal <span>$66.77</span>
+    </h4>
+    <h4 class="font-header text-slate-800">Shipping <span>$2.22</span></h4>
+    <h4 class="font-header text-slate-800">Sales Tax <span>$12.33</span></h4>
+    <h2
+      class="font-header text-2xl text-slate-900 border-t-2 border-t-slate-800"
+    >
+      Total: $81.67
+    </h2>
+  </div>
+</div>

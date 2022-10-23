@@ -1,0 +1,79 @@
+:host ::ng-deep .mat-ripple-element {
+  position: absolute;
+}
+
+// * {
+//   position: relative;
+//   box-sizing: border-box;
+// }
+
+
+:root {}
+
+.Stars {
+  --star-size: 20px;
+  --star-color: #fff;
+  --star-background: #fc0;
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; // make sure ★ appears correctly
+  line-height: 1;
+
+  &::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.wrapper {
+  display: flex;
+
+  >* {
+    border-bottom: 2px solid black;
+    // margin-right: 50px;
+  }
+
+  // h1 {
+  //   font-family: var(--header-font);
+  // }
+
+  .img-container {}
+
+  .info-container {
+    padding: 2em;
+    // width: 620px;
+  }
+
+  .details-container {
+    // width: 620px;
+
+    mat-tab-header {
+
+      .mat-tab-labels {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+
+    // padding: 2em;
+
+  }
+}
+
+.g-image-item {
+  background-size: contain !important;
+}
+
+g-active-thumb {
+  opacity: 1 !important;
+  border: 1px solid grey;
+
+  .g-active-thumb {
+    border: 1px solid black;
+  }
+}

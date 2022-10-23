@@ -1,0 +1,132 @@
+<div class="wrapper lg:mx-28 flex flex-wrap" *ngIf="imageObject">
+  <!-- @detailAnimation -->
+  <div
+    class="img-container w-4/6 max-w-full border-b-2 border-r-2 border-r-slate-900 pr-10 py-10 md:pr-10 md:pb-10"
+  >
+    <!-- <img class="object-scale-down animate-img" src="{{ data.image }}" alt="" /> -->
+    <!-- <ng-image-slider
+      [images]="imageObject"
+      [imageSize]="{ width: '200px', height: '200px', space: 4 }"
+      #nav
+    ></ng-image-slider> -->
+    <gallery
+      [items]="imageObject"
+      thumbPosition="left"
+      thumbSize="contain"
+      style="background-color: #ffffff"
+    ></gallery>
+  </div>
+  <!-- <div class="non-img-wrapper flex flex-wrap flex-col md:flex-row"> -->
+  <!-- <div class="non-img-wrapper flex fr"> -->
+
+  <div
+    class="info-container w-96 max-w-full border-b-2 border-r-2 border-b-slate-900 border-r-slate-900"
+  >
+    <span class="relative">
+      <h1 class="font-header text-2xl">
+        {{ data.title }}
+
+        {{ data }}
+      </h1>
+      <span
+        class="absolute h-full w-full bg-yellow-500 block z-10 scale-x-0 top-0"
+      ></span>
+    </span>
+    <h2 class="font-sub font-bold text-1xl">Price ${{ data.price }}</h2>
+    <h3 class="font-sub text-1xl">
+      Or Pay over 3 installments of ${{ data.price / 3 }}
+    </h3>
+    <div
+      class="Stars"
+      [style.--rating]="data.rating.rate"
+      aria-label="Rating of this product is 2.3 out of 5."
+    ></div>
+    <h3 class="font-sub text-1xl">
+      {{ data.rating.rate }} / 5 From {{ data.rating.count }}
+    </h3>
+    <h2 class="">{{ data.price }}</h2>
+    <app-purchase-options [prod]="data"></app-purchase-options>
+    <button routerLink="/cart">SEND TO CART</button>
+  </div>
+
+  <!-- <div
+      class="cart-container max-w-full w-40 border-b-slate-900 border-b-2 grow"
+    ></div> -->
+
+  <div class="delivery-container flex flex-wrap md:w-3/5">
+    <div class="standard delivery-section w-1/2 p-2">
+      <h2 class="text-2xl font-header">
+        <span>
+          <mat-icon>home</mat-icon>
+        </span>
+        Standard Delivery
+      </h2>
+      <p class="font-sub text-lg">
+        Delivered within 3-7 Days
+        <br />
+        <span class="font-bold">$4.99</span>
+      </p>
+    </div>
+    <div class="next-day delivery-section w-1/2 p-2">
+      <h2 class="text-2xl font-header">
+        <span> <mat-icon>local_shipping</mat-icon> </span>Express Delivery
+      </h2>
+      <p class="font-sub text-lg">
+        Order by 20:00 (8pm) for Next Day Delivery
+        <br />
+        <span class="font-bold">$7.99</span>
+      </p>
+    </div>
+    <div class="international-day delivery-section w-1/2 p-2">
+      <h2 class="text-2xl font-header">
+        <span>
+          <mat-icon>flight</mat-icon>
+        </span>
+        International Delivery
+      </h2>
+      <p class="font-sub text-lg">
+        Order by 20:00 (8pm) for Next Day Delivery
+        <br />
+        <span class="font-bold"><a>inquire</a></span>
+      </p>
+    </div>
+    <div class="store-day delivery-section w-1/2 p-2">
+      <h2 class="text-2xl font-header">
+        <span>
+          <mat-icon>shopping_bag</mat-icon>
+        </span>
+        Store Delivery
+      </h2>
+      <p class="font-sub text-lg">
+        Delivered to your chosen store 3-7 days
+        <br />
+        <span class="font-bold">$4.99</span>
+      </p>
+    </div>
+  </div>
+  <!-- </div> -->
+  <!-- </div> -->
+  <div
+    class="details-container max-w-full border-r-slate-900 border-r-2 md:w-2/5"
+  >
+    <mat-tab-group mat-align-tabs="start" class="flex justify-between">
+      <mat-tab label="Description" class="p-2">{{ data.description }}</mat-tab>
+      <mat-tab label="Fitting" class="p-2"
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae delectus
+        quibusdam, corrupti, doloremque quos voluptatem debitis veritatis qui
+        distinctio laboriosam velit labore sequi, impedit animi quidem deleniti
+        magnam aspernatur obcaecati.</mat-tab
+      >
+      <!-- <mat-tab label="Third">Content 3</mat-tab> -->
+    </mat-tab-group>
+  </div>
+</div>
+<!-- <div
+  class="flex items-center flex-col max-w-full overflow-hidden w-96 h-96 rounded-lg md:mr-12"
+>
+
+  <div class="card-detail">
+
+  </div>
+
+</div> -->

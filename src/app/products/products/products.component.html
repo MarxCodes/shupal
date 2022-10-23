@@ -1,0 +1,40 @@
+<!-- <h1>YOYO</h1>
+<h3 *ngFor="let item of navigationList">{{ item }}</h3> -->
+<mat-sidenav-container class="example-sidenav-container">
+  <!-- [style.marginTop.px]="mobileQuery.matches ? 56 : 0" -->
+  <mat-sidenav class="flex border-r-slate-900 border-r-2" #snav opened>
+    <mat-accordion>
+      <mat-expansion-panel
+        class="border-b-slate-900 border-b-2"
+        *ngFor="let item of accList"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title class="font-header p-2 text-3xl">
+            <mat-icon aria-hidden="false" aria-label="Example home icon"
+              >remove</mat-icon
+            >
+            {{ item.name }}
+          </mat-panel-title>
+          <!-- <mat-panel-description>
+            This is a summary of the content
+          </mat-panel-description> -->
+        </mat-expansion-panel-header>
+        <app-reuse-checkbox [list]="item.list"></app-reuse-checkbox>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar
+      *ngIf="mobileQuery.matches"
+      color="primary"
+      class="example-toolbar"
+    >
+      <button mat-icon-button (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1 class="example-app-name">Responsive App</h1>
+    </mat-toolbar>
+    <app-product-list></app-product-list>
+  </mat-sidenav-content>
+</mat-sidenav-container>

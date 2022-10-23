@@ -1,0 +1,13 @@
+<p>cart works!</p>
+<!-- <h1 *ngIf="shoppingCart | async">no cart</h1> -->
+<h1 *ngIf="!shoppingCart">no cart</h1>
+
+<ul *ngFor="let item of (shoppingCart | async)?.shoppingCart">
+  <li>{{ item.title }} {{ item.category }}</li>
+</ul>
+
+<ul *ngFor="let cryMore of myList">
+  <li>{{ cryMore }} {{ cryMore.category }}</li>
+</ul>
+
+{{ mineData }}

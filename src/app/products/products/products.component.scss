@@ -1,0 +1,39 @@
+mat-sidenav-container {
+  width: 100%;
+  // height: calc(100vh - 60px);
+}
+
+mat-sidenav {
+  // margin: 16px;
+  width: 250px;
+  // border-radius: 10px;
+  // color: white;
+  // background: #002b5c;
+  border-right: 2px solid black;
+  // padding: 16px;
+}
+
+mat-toolbar {
+  // position: fixed;
+  top: 0;
+}
+
+mat-drawer-side {
+  border: none;
+}
+
+.active_nav {
+  // background-color: #F5F6FA;
+  // border-left: 8px solid #0097E6;
+  // color: #ffffff;s
+  font-weight: 600;
+  // border-radius: 1em;
+  background-color: #B2A0F3;
+  transition: all 200ms ease-out;
+
+  ul li {
+    // font-size: /
+    font-weight: medium;
+  }
+
+}

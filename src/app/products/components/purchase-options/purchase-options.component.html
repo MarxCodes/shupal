@@ -1,0 +1,65 @@
+<form [formGroup]="form">
+  <h3 class="font-sub text-1xl font-bold">Sizes</h3>
+  <div class="size-container flex flex-row">
+    <label *ngFor="let item of list" [for]="[item]" class="mr-2">
+      <input
+        type="radio"
+        name="checks"
+        [id]="[item]"
+        formControlName="checks"
+        [style.--item]="item"
+        [value]="[item]"
+      />
+      <span>{{ item }}</span>
+      <div class="check"></div>
+    </label>
+  </div>
+  <h3 class="font-sub text-1xl font-bold">Quantity</h3>
+
+  <div class="qty-counter-container flex flex-row w-14 mb-4">
+    <!-- <label for="qty-select">Choose a size:</label> -->
+
+    <select
+      class="w-20 border-2 border-slate-900 p-2 rounded-md"
+      name="pets"
+      id="qty-select"
+      formControlName="qty"
+    >
+      <option value="">--Please choose an option--</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="4">5</option>
+    </select>
+    <!-- <button
+      class="flex h-8 w-8 bg-slate-400 items-center justify-center mr-2"
+      (click)="minus()"
+    >
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >remove</mat-icon
+      >
+    </button>
+    <input
+      class="border-slate-900 border-2 w-12 mr-2"
+      type="text"
+      [value]="quantity"
+      formControlName="qty"
+    />
+    <button
+      class="flex h-8 w-8 bg-slate-400 items-center justify-center"
+      (click)="add()"
+    >
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >add</mat-icon
+      >
+    </button> -->
+  </div>
+  <button
+    (click)="addToCart()"
+    class="bg-cyan-500 text-white px-4 py-2 font-sub mr-2"
+  >
+    Add to Cart
+  </button>
+  <button class="bg-slate-800 text-white px-4 py-2 font-sub">Buy Now</button>
+</form>

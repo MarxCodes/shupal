@@ -1,0 +1,10 @@
+<p>bart works!</p>
+<p *ngIf="shoppingCart | async as doll">
+  dart works!
+  <!-- <h1 *ngFor="let item of doll">{{item}}</h1> -->
+</p>
+<!-- <h2 *ngFor="let item of doll">{{ doll }}</h2> -->
+
+<ul *ngFor="let item of (shoppingCart | async)?.shoppingCart">
+  <li>{{ item }}</li>
+</ul>
