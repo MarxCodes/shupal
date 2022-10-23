@@ -1,4 +1,34 @@
-# Shupal
+<h1> Shop Task </h1>
+
+<h2>Description</h2>
+<p>Sample Application using Angular & Tailwind to create an shop front-end.
+<br>
+<a href="https://shoppee-pal-04272a.netlify.app">View app here</a>
+</p>
+
+
+<h2> Features </h2>
+<ul>
+  <li> Angular</li>
+  <li> NGRX state management</li>
+  <li> Routing </li>
+  <li> Reactive Forms </li>
+  <li> Landing Page </li>
+  <li> Data-binding</li>
+  <li> Angular Animations</li>
+  <li> Angular Routing </li>
+  <li> 3rd party Shoppy API </li>
+  <li> Tailwind CSS Framework </li>
+</ul>
+
+### To-Do List 
+
+- [x] Responsive
+- [x] Break up into seperate modules
+- [x] Unit Testing
+- [ ] Add payment API (e.g. stripe)
+- [ ] Add Product Filtering
+- [ ] Create robust Products API 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
 
