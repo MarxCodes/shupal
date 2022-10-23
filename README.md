@@ -1,7 +1,7 @@
 <h1> Shop Task </h1>
 
 <h2>Description</h2>
-<p>Sample Application using Angular & Tailwind to create an shop front-end.
+<p>Sample Application using Angular & Tailwind to create a shop front-end.
 <br>
 <a href="https://shoppee-pal-04272a.netlify.app">View app here</a>
 </p>
